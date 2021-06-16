@@ -1,6 +1,9 @@
 //https://www.flvto.biz/
 //Use MutationObserver to hide iframe once it is added to dom. 
 
+// Element selector - Replace with your element to hide.
+const ELEMENT_TO_HIDE = 'iframe';
+
 // Select the node that will be observed for mutations
 const targetNode = document;
 
@@ -11,9 +14,9 @@ const config = { attributes: true, childList: true, subtree: true };
 const callback = function(mutationsList, observer) {
     for(let mutation of mutationsList) {
         if (mutation.type === 'childList') {
-            const iframes = document.querySelectorAll('iframe');
-            for(let iframe of iframes) {
-            	iframe.style.display = 'none';
+            const elsToHide = document.querySelectorAll(ELEMENT_TO_HIDE);
+            for(let elToHide of elsToHide) {
+                elToHide.style.display = 'none';
             }
         }
     }

@@ -1,0 +1,37 @@
+/* External div hider Selector*/
+#madan_hider{
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left:0;
+    top:0;
+    z-index: 10000;
+    background-color:black;
+}
+
+/* Video Wrapper Selector */
+.madan_video_wrapper{
+    z-index: 20000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh;
+}
+
+/* Main Video Selector */
+.madan_main_video{
+    width: 100% !important;
+    height: auto;
+    width: 100vw !important;
+    z-index: 30000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Hide or Show the Hidder */
+.madan_hider_hide{
+    display: none;
+}
